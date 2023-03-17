@@ -1,7 +1,6 @@
 import { selectors } from "./selectors";
-import { faker } from "@faker-js/faker";
 
-export const visitLandingPage = () => {
+export const visitWebsite = () => {
     cy.visit("https://cookidoo.co.uk/foundation/en-GB");
     cy.url().should("include", "cookidoo.co.uk");
 };

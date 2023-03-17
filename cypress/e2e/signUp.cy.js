@@ -13,7 +13,7 @@ describe("Register a New User", () => {
     },
   ].forEach((user) => {
     it("Fills in Sign Up form", () => {
-      landingPage.visitLandingPage();
+      landingPage.visitWebsite();
       landingPage.clickAuthenticationButton();
       signUpPage.fillSignUpForm(user);
     });
