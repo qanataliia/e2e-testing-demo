@@ -18,11 +18,3 @@ export const clickAuthenticationButton = () => {
     cy.get(signUpForm).should('be.visible');
     });
 };
-
-export const fillSignUpForm = () => {
-    cy.location('https://login.vorwerk.com', () => {   
-        cy.get(selectors.emailInput).click().type(faker.internet.email());
-        cy.get(selectors.passwordInput).click().type(faker.internet.password()).should('have.value');
-        cy.check(selectors.termsCheckbox).should('be.checked');
-    });
-};
