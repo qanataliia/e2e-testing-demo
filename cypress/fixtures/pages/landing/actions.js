@@ -1,7 +1,7 @@
 import { selectors } from "./selectors";
 
 export const visitWebsite = () => {
-    cy.visit("https://cookidoo.co.uk/foundation/en-GB");
+    cy.visit('/foundation/en-GB');
     cy.url().should("include", "cookidoo.co.uk");
 };
 
