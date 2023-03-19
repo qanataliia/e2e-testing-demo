@@ -1,3 +1,4 @@
+import { SortOptions } from "../../common";
 import { selectors } from "./selectors";
 
 export const visitWebsite = () => {
@@ -11,6 +12,9 @@ export const searchRecipe = (recipe) => {
 };
 
 export const sortByName = () => {
-  cy.get(".sortby-box").should("be.visible").contains("Relevance").click();
-  cy.findByText("Name").should("be.visible").click();
+  cy.get(selectors.sortByDropdown)
+    .invoke("css", "display", "block")
+    .find(selectors.sortByList)
+    .eq(5)
+    .click();
 };

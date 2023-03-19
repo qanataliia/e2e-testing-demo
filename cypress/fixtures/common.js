@@ -6,11 +6,20 @@ export const User = Object.freeze({
     password: faker.internet.password(8, true, /[A-Z]/),
   },
   invalidUser: {
-    username: faker.name.fullName().replace(/./, '*'),
+    username: faker.name.fullName().replace(/./, "*"),
     password: faker.internet.password(8, true, /[A-Z]/),
   },
 });
 
 export const Recipe = Object.freeze({
-  vegetableSoup: 'Vegetable Soup',
+  vegetableSoup: "Vegetable Soup",
+});
+
+export const SortOptions = Object.freeze({
+  relevance: "Relevance",
+  newest: "Newest",
+  name: "Name",
+  totalTime: "Total time, shortest",
+  prepTime: "Prep. time, shortest",
+  bestRated: "Best rated",
 });
