@@ -7,7 +7,7 @@ import { selectors } from "../fixtures/pages/search/selectors";
 describe("Search for Valid Recipe", () => {
   beforeEach(() => {
     cy.clearAllSessionStorage();
-    searchPage.visitWebsite();
+    searchPage.visitSearchPage();
   });
   it("Displays Search Results", () => {
     landingPage.acceptCookies();
@@ -22,7 +22,7 @@ describe("Search for Valid Recipe", () => {
 describe("Search for Invalid Recipe", () => {
   it("Displays an Error Message", () => {
     cy.clearAllSessionStorage();
-    searchPage.visitWebsite();
+    searchPage.visitSearchPage();
     landingPage.acceptCookies();
     searchPage.searchRecipe(faker.commerce.productName());
     searchPage.validateErrorMessage();

@@ -1,7 +1,7 @@
 import { SortOptions } from "../../common";
 import { selectors } from "./selectors";
 
-export const visitWebsite = () => {
+export const visitSearchPage = () => {
   cy.visit("/search/en-GB?context=recipes");
   cy.url().should("include", "cookidoo.co.uk");
 };
