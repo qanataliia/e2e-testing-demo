@@ -9,3 +9,13 @@ Cypress.Commands.add("validatePrice", () => {
       expect(prices[1]).to.equal("48");
     });
 });
+
+Cypress.Commands.add('validateRedirection', (originalUrl, redirectedUrl) => {
+    cy.visit(originalUrl, {
+      onBeforeLoad(win) {
+        cy.stub(win, 'open').as('windowOpen');
+      },
+    });
+    cy.get(':nth-child(7) > .button--primary').click();
+    cy.get('@windowOpen').should('be.calledWith', redirectedUrl);
+  });
