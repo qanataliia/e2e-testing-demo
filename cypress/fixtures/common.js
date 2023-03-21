@@ -23,3 +23,14 @@ export const SortOptions = Object.freeze({
   prepTime: "Prep. time, shortest",
   bestRated: "Best rated",
 });
+
+export const Difficulty = Object.freeze({
+  easy: "Easy",
+  medium: "Medium",
+  hard: "Hard"
+});
+
+export const Section = Object.freeze({
+  ingredients: "Ingredients",
+  nutrition: "Nutrition"
+});
