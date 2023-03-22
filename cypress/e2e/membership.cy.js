@@ -1,14 +1,16 @@
 import { landingPage, membershipPage } from "../fixtures";
+import { selectors } from "../fixtures/pages/membership/selectors";
 
 describe("Membership Page", () => {
-  it("Displays the Correct Membership Price", () => {
+  beforeEach(() => {
+    cy.clearAllSessionStorage();
     membershipPage.visitMembershipPage();
     landingPage.acceptCookies();
+  });
+  it("Displays the Correct Membership Price", () => {
     cy.validatePrice();
   });
   it("Trial Button Redirects to Sign Up Page", () => {
-    membershipPage.visitMembershipPage();
-    landingPage.acceptCookies();
-    cy.get(".button--outline-primary").click();
+    membershipPage.clickFreeTrialButton();
   });
 });
