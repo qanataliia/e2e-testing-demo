@@ -2,7 +2,6 @@ import { faker } from "@faker-js/faker";
 import { landingPage } from "../fixtures";
 import { Recipe } from "../fixtures/common";
 import { searchPage } from "../fixtures/pages/search";
-import { selectors } from "../fixtures/pages/search/selectors";
 
 describe("Search for Valid Recipe", () => {
   beforeEach(() => {

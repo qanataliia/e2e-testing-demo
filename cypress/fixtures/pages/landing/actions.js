@@ -18,6 +18,6 @@ export const clickAuthenticationButton = () => {
   });
 };
 
-export const clickTryForFree = () => {
+export const clickFreeTrialButton = () => {
   cy.get(selectors.tryForFreeButton).should("be.enabled").click();
 };

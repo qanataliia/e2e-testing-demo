@@ -1,3 +1,3 @@
 export const selectors = {
-  freeTrialButton: ".button--outline-primary",
+    tryForFreeButton: ".button--outline-primary",
 };

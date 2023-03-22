@@ -6,5 +6,5 @@ export const visitMembershipPage = () => {
 };
 
 export const clickFreeTrialButton = () => {
-  cy.get(selectors.freeTrialButton).should("be.visible").click();
+  cy.get(selectors.tryForFreeButton).should("be.visible").click();
 };

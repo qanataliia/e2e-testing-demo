@@ -7,6 +7,6 @@ describe("Visit Landing Page", () => {
     landingPage.acceptCookies();
   });
   it("Validate Landing Page", () => {
-    landingPage.clickTryForFree();
+    landingPage.clickFreeTrialButton();
   });
 });
