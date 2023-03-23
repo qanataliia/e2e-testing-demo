@@ -1,5 +1,4 @@
 import { landingPage, membershipPage } from "../fixtures";
-import { selectors } from "../fixtures/pages/membership/selectors";
 
 describe("Membership Page", () => {
   beforeEach(() => {
