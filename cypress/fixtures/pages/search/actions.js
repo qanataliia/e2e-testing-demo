@@ -1,4 +1,4 @@
-import { SortOptions } from "../../common";
+import { SearchContext } from "../../common";
 import { selectors } from "./selectors";
 
 export const visitSearchPage = () => {
@@ -6,9 +6,13 @@ export const visitSearchPage = () => {
   cy.url().should("include", "cookidoo.co.uk");
 };
 
+function selectFirstOption() {
+  cy.get("ul").find("li").first().click({ force: true });
+}
+
 export const searchRecipe = (recipe) => {
   cy.get(selectors.inputField).first().click().type(recipe).type("{enter}");
-  cy.get("ul").find("li").first().click({ force: true });
+  selectFirstOption();
 };
 
 export const sortByName = () => {
@@ -17,4 +21,30 @@ export const sortByName = () => {
     .find(selectors.sortByList)
     .eq(5)
     .click();
+};
+
+function clickContextDropdown() {
+  cy.get(selectors.searchContextDropdown).eq(0).click();
+}
+
+export const openCollections = () => {
+  clickContextDropdown();
+  cy.findByText(SearchContext.collections).click();
+  cy.get(selectors.collectionTile).should("be.visible");
+};
+
+export const searchCollection = (collection) => {
+  cy.get(selectors.inputField).first().click().type(collection).type("{enter}");
+  selectFirstOption();
+};
+
+export const openArticles = () => {
+  clickContextDropdown();
+  cy.findByText(SearchContext.articles).click();
+  cy.get(selectors.articleTile).should("be.visible");
+};
+
+export const searchArticle = (article) => {
+  cy.get(selectors.inputField).first().click().type(article).type("{enter}");
+  selectFirstOption();
 };

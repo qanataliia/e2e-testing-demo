@@ -27,10 +27,26 @@ export const SortOptions = Object.freeze({
 export const Difficulty = Object.freeze({
   easy: "Easy",
   medium: "Medium",
-  hard: "Hard"
+  hard: "Hard",
 });
 
 export const Section = Object.freeze({
   ingredients: "Ingredients",
-  nutrition: "Nutrition"
+  nutrition: "Nutrition",
+});
+
+export const SearchContext = Object.freeze({
+  recipes: "Recipes",
+  collections: "Collections",
+  articles: "Articles",
+});
+
+export const Collection = Object.freeze({
+  breakfast: "Breakfast",
+  vegetarian: "Vegetarian",
+});
+
+export const Article = Object.freeze({
+  inspiration: "Inspiration",
+  tips: "Tips",
 });

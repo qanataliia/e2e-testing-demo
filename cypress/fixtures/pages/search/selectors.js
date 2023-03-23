@@ -5,4 +5,7 @@ export const selectors = {
   sortByList: "label.core-dropdown-list__item",
   sortByDropdown: "div.core-dropdown-text__content",
   errorHeader: ".core-error-page__header",
+  collectionTile: ".core-tile--collection",
+  articleTile: ".core-article-tile__image",
+  searchContextDropdown: '[aria-haspopup="listbox"]',
 };
