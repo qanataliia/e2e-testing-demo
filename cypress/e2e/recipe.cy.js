@@ -1,8 +1,12 @@
 import { recipePage } from "../fixtures/pages/recipe";
 
 describe("Recipe", () => {
-  it("Displays information about a recipe", () => {
+  before(() => {
+    cy.clearAllCookies();
     recipePage.visitRecipePage();
+    cy.acceptCookies();
+  });
+  it("Displays a Recipe", () => {
     recipePage.validateContent();
   });
 });

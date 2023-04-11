@@ -1,3 +1,5 @@
+import { selectors } from "../fixtures/pages/landing/selectors";
+
 Cypress.Commands.add("validatePrice", () => {
   cy.get("p strong")
     .contains("£40/€48 per year")
@@ -19,3 +21,9 @@ Cypress.Commands.add('validateRedirection', (originalUrl, redirectedUrl) => {
     cy.get(':nth-child(7) > .button--primary').click();
     cy.get('@windowOpen').should('be.calledWith', redirectedUrl);
   });
+
+Cypress.Commands.add('acceptCookies', () => {
+      cy.get(selectors.cookiesAlert).should("be.visible");
+      cy.get(selectors.acceptCookiesButton).should("be.enabled").click();
+      cy.get(selectors.cookiesAlert).should("not.be.visible");
+    });
