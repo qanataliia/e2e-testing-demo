@@ -12,11 +12,8 @@
   },
   "author": "Nataliia Hromenko",
   "license": "ISC",
-  "skripts": {
-    "start": "./node_modules/.bin/cypress open",
-    "cypress:run:ci": "cypress run --reporter mochawesome --reporter-options reportDir=reports,overwrite=false,html=false,json=true",
-    "cypress:run:ci:merge": "mochawesome-merge reports/mochawesome*.json > reports/mochawesome.json",
-    "cypress:run:ci:report": "marge reports/mochawesome.json -f report -o reports"
+  "scripts": {
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@faker-js/faker": "7.6.0",
