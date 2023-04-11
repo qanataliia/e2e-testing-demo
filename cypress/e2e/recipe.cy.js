@@ -8,5 +8,6 @@ describe("Recipe", () => {
   });
   it("Displays a Recipe", () => {
     recipePage.validateContent();
+    recipePage.validateIngredients();
   });
 });
