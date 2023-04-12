@@ -1,6 +1,6 @@
 import { selectors } from "./selectors";
 
-export const validateContent = () => {
+export const validatePage = () => {
   cy.url().should("include", "/recipe");
   cy.get(selectors.recipeCard).should("be.visible");
   assertIconsVisibility();

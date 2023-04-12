@@ -6,8 +6,8 @@ describe("Recipe", () => {
     recipePage.visitRecipePage();
     cy.acceptCookies();
   });
-  it("Displays a Recipe", () => {
-    recipePage.validateContent();
+  it("Displays a Recipe Sections", () => {
+    recipePage.validatePage();
     recipePage.validateIngredients();
   });
 });
