@@ -17,10 +17,6 @@ describe("Change Language", () => {
     cy.clearAllSessionStorage();
     landingPage.visitWebsite();
     cy.acceptCookies();
-    cy.get(selectors.languageButton)
-      .scrollIntoView()
-      .should("be.visible")
-      .click();
-   landingPage.changeLanguage();
+    landingPage.changeLanguage();
   });
 });

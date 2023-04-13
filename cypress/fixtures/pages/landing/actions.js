@@ -21,3 +21,12 @@ export const clickAuthenticationButton = () => {
 export const clickFreeTrialButton = () => {
   cy.get(selectors.tryForFreeButton).should("be.enabled").click();
 };
+
+export const changeLanguage = () => {
+  cy.get(selectors.languageButton)
+    .scrollIntoView()
+    .should("be.visible")
+    .click();
+  cy.get(selectors.languageList).contains("Deutsch").click();
+  cy.get(selectors.languageButton).contains("Deutsch").should("be.visible");
+};
