@@ -50,3 +50,21 @@ export const Article = Object.freeze({
   inspiration: "Inspiration",
   tips: "Tips",
 });
+
+export const Language = Object.freeze({
+  english: "English",
+  german: "German",
+  french: "French",
+  spanish: "Spanish",
+  italian: "Italian",
+  dutch: "Dutch",
+});
+
+export const Country = Object.freeze({
+  unitedKingdom: "United Kingdom",
+  germany: "Germany",
+  france: "France",
+  spain: "Spain",
+  italy: "Italy",
+  netherlands: "Netherlands",
+});
