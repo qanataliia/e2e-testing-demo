@@ -21,6 +21,6 @@ describe("Change Language", () => {
       .scrollIntoView()
       .should("be.visible")
       .click();
-    // landingPage.changeLanguage();
+   landingPage.changeLanguage();
   });
 });
